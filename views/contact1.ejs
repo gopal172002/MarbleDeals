@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %> </title></title>
+  
+  <link rel="icon" type="image/x-icon" href="/img/fabicon.ico">
+</head>
+<body>
+  <%-include('../partials/bar.ejs');%>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Feel free to reach out to us for any inquiries or questions.</p>
+    <form action="/signup" method="POST"  onsubmit="return validateForm()" >
+      <div>
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter Your Name">
+      </div>
+      <div>
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter Your Email">
+      </div>
+      <div>
+        <label for="mobileno">Your Mobile No.</label>
+        <textarea id="mobileno" name="mobileno" required placeholder="Enter Your Mobile Number"></textarea>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required placeholder="Enter Your Query,Complain or Remark Message"></textarea>
+      </div>
+      
+     <input    class="btn"   type="submit" value="Submit">
+    </form>
+  </div>
+  <%-include('../partials/nav.ejs');%>
+  <%-include('../partials/head.ejs');%>
+</body>
+</html>
