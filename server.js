@@ -14,7 +14,6 @@ app.use(express.static('scripts'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(mainRoute);
 app.use(errorHandler);
-
 const url = process.env.MONGOURL;
 mongoose.connect(url ,{
     // useNewUrlParser : true,
