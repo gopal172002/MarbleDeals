@@ -1,57 +1,36 @@
 const router = require('express').Router();
 const User = require('../models/userModel')
 router.get('/',(req,res)=>{
-    res.render('websit',{  
-       title:'Makrana Marbles Manufacturer-Best Prices, Use Application'
-    });
+    res.render('websit');
 });
 router.get('/about',(req,res)=>{
-   res.render('about',{   
-       title:'About Marbles-Importance,Quality and Our Contacts'
-    });
+   res.render('about');
 });
 router.get('/albeta',(req,res)=>{
-   res.render('albeta',{   
-       title:'Albeta Marble'
-    });
+   res.render('albeta');
 });
 router.get("/contact", (req, res) => {
     res.set("Access-Control-Allow-Origin", "*");
-    res.render("contact1", {
-      title: "Contact to Marble Store",
-    });
+    res.render("contact1");
     return;
-  });
-  
+  }); 
 router.get('/cutsize',(req,res)=>{
-   res.render('cutsize',{   
-       title:'CutSize Marble'
-    });
+   res.render('cutsize');
 });
 router.get('/dungari',(req,res)=>{
-   res.render('dungari',{   
-       title:'Dungari Marble-More Old more Shine'
-    });
+   res.render('dungari');
 });
 router.get('/getAquote',(req,res)=>{
-   res.render('getAquote',{   
-       title:'getAquote Makrana Marbles'
-    });
+   res.render('getAquote');
 });
 router.get('/kumari',(req,res)=>{
-   res.render('kumari',{   
-       title:'Kumari Marble-Constant shine for life time'
-    });
+   res.render('kumari');
 });
 router.get('/services',(req,res)=>{
-   res.render('services1',{   
-       title:'Makrana Marble Services'
-    });
+   res.render('services1');
 });
 router.get('/specialdesign',(req,res)=>{
-   res.render('specialdesign',{   
-       title:'SpecialDesign Marble-Naturally special designs printings'
-    });
+   res.render('specialdesign');
 });
 
 router.post("/signup", async (req, res) => {
